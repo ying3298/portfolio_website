@@ -77,12 +77,12 @@ export function SelectedWork() {
             <span>© Featured Projects</span>
           </div>
         </div>
-        <p className="text-body text-foreground/85 leading-relaxed max-w-2xl mb-8">
+        <p className="text-body text-muted leading-relaxed max-w-2xl mb-8">
           From interface flows to tangible prototypes, these projects capture how I design interactions that make invisible visible and feel intuitive, grounded, and deeply human.
         </p>
         <a
           href="#selected-work-heading"
-          className="inline-block text-small font-medium uppercase tracking-wider text-foreground underline underline-offset-4 hover:opacity-80 transition-opacity mb-10"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-white bg-transparent text-foreground text-small font-medium uppercase tracking-wider hover:opacity-90 transition-opacity mb-10 w-fit"
         >
           SEE WORKS
         </a>

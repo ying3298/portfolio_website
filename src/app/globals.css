@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf9;
-  --foreground: #171717;
-  --muted: #737373;
-  --accent: #737373;
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #b0b0b0;
+  --accent: #b0b0b0;
+  --divider: rgba(255, 255, 255, 0.1);
   /* Design tokens - edit these to adjust spacing & typography */
   --spacing-section: clamp(6rem, 15vw, 12rem);
   --spacing-block: clamp(1.5rem, 4vw, 3rem);
-  --spacing-inline: clamp(1.25rem, 5vw, 3rem);
+  --spacing-inline: clamp(1.5rem, 5vw, 4rem);
   --font-hero: clamp(2rem, 12vw, 3.5rem);
   --font-h1: clamp(1.5rem, 5vw, 2rem);
   --font-h2: clamp(1.25rem, 4vw, 1.75rem);
   --font-body: clamp(1.25rem, 1.5vw, 1.25rem);
   --font-small: clamp(0.875rem, 1vw, 1rem);
   --font-sf-pro: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
-  --font-display: var(--font-fraunces), serif;
+  --font-display: var(--font-space-grotesk), var(--font-sf-pro);
 }
 
 @theme inline {
