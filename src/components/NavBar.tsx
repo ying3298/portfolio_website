@@ -10,7 +10,7 @@ const quickLinks = [
 export function NavBar() {
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 px-[var(--spacing-inline)] py-6 md:py-8 flex items-start justify-between bg-background/95 backdrop-blur-md border-b"
+      className="fixed top-0 left-0 right-0 z-50 px-[var(--spacing-inline)] py-6 md:py-8 grid grid-cols-[auto_1fr_auto] items-start justify-items-stretch gap-4 bg-background/95 backdrop-blur-md border-b"
       style={{ borderColor: "var(--divider)" }}
       role="banner"
     >
@@ -23,7 +23,7 @@ export function NavBar() {
 
       <nav
         aria-label="Quick links"
-        className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+        className="flex flex-col items-start gap-1 justify-self-start"
       >
         <p className="text-sm font-medium text-foreground">Quick Links</p>
         <p className="text-sm text-muted">
@@ -38,7 +38,7 @@ export function NavBar() {
         </p>
       </nav>
 
-      <div className="hidden sm:flex flex-col items-end text-right shrink-0">
+      <div className="hidden sm:flex flex-col items-end text-right shrink-0 justify-self-end">
         <p className="text-sm font-medium text-foreground">Based in New York</p>
         <p className="text-sm text-muted">Interaction Designer</p>
       </div>
