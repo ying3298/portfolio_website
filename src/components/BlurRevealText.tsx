@@ -59,7 +59,7 @@ export function BlurRevealText({
 
   return (
     <MotionTag
-      ref={ref as React.Ref<HTMLElement>}
+      ref={ref as any}
       id={id}
       initial={initial}
       animate={animate}
