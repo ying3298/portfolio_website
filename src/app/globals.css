@@ -3,10 +3,10 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --muted: #b0b0b0;
-  --accent: #b0b0b0;
-  --divider: rgba(255, 255, 255, 0.1);
-  /* Design tokens - edit these to adjust spacing & typography */
+  --muted: #9ca3af;
+  --marquee-muted: #a3a3a3;
+  --border-dark: #333333;
+  --divider: #333333;
   --spacing-section: clamp(6rem, 15vw, 12rem);
   --spacing-block: clamp(1.5rem, 4vw, 3rem);
   --spacing-inline: clamp(1.5rem, 5vw, 4rem);
@@ -15,62 +15,25 @@
   --font-h2: clamp(1.25rem, 4vw, 1.75rem);
   --font-body: clamp(1.25rem, 1.5vw, 1.25rem);
   --font-small: clamp(0.875rem, 1vw, 1rem);
-  --font-sf-pro: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
-  --font-display: var(--font-space-grotesk), var(--font-sf-pro);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-sf-pro);
-  --font-display: var(--font-display);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sf-pro);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Typography utilities – Tailwind treats text-[var(...)] as color, so we set font-size explicitly */
-.text-hero {
-  font-size: var(--font-hero);
-}
-.text-h1 {
-  font-size: var(--font-h1);
-}
-.text-h2 {
-  font-size: var(--font-h2);
-}
-.text-body {
-  font-size: var(--font-body);
-}
-.text-small {
-  font-size: var(--font-small);
-}
-
-.text-label {
-  font-size: 0.8125rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.marquee-container {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-}
+.text-hero { font-size: var(--font-hero); }
+.text-h1 { font-size: var(--font-h1); }
+.text-h2 { font-size: var(--font-h2); }
+.text-body { font-size: var(--font-body); }
+.text-small { font-size: var(--font-small); }
+.text-label { font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }

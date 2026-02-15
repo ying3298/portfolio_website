@@ -10,37 +10,37 @@ const quickLinks = [
 export function NavBar() {
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 px-[var(--spacing-inline)] py-6 md:py-8 grid grid-cols-[auto_1fr_auto] items-start justify-items-stretch gap-4 bg-background/95 backdrop-blur-md border-b"
-      style={{ borderColor: "var(--divider)" }}
+      className="fixed top-0 left-0 right-0 z-50 flex items-start justify-between bg-[#000] border-b px-5 md:px-6 py-4"
+      style={{ borderColor: "#333", borderWidth: "1px" }}
       role="banner"
     >
       <a
         href="#"
-        className="text-lg md:text-xl font-bold text-foreground hover:opacity-80 transition-opacity shrink-0"
+        className="text-[#fff] font-medium text-[18px] hover:opacity-80 transition-opacity shrink-0"
       >
         Ying C
       </a>
 
       <nav
         aria-label="Quick links"
-        className="flex flex-col items-start gap-1 justify-self-start"
+        className="flex flex-col items-start gap-0.5 text-left"
       >
-        <p className="text-sm font-medium text-foreground">Quick Links</p>
-        <p className="text-sm text-muted">
+        <p className="text-[#fff] font-medium text-[14px]">Quick Links</p>
+        <p className="text-[#9ca3af] font-normal text-[14px]">
           {quickLinks.map(({ label, href }, i) => (
             <span key={label}>
-              <a href={href} className="hover:text-foreground transition-colors">
+              <a href={href} className="hover:text-[#fff] transition-colors">
                 {label}
               </a>
-              {i < quickLinks.length - 1 && <span className="text-muted/70">, </span>}
+              {i < quickLinks.length - 1 && <span className="text-[#9ca3af]">, </span>}
             </span>
           ))}
         </p>
       </nav>
 
-      <div className="hidden sm:flex flex-col items-end text-right shrink-0 justify-self-end">
-        <p className="text-sm font-medium text-foreground">Based in New York</p>
-        <p className="text-sm text-muted">Interaction Designer</p>
+      <div className="hidden sm:flex flex-col items-start text-left shrink-0">
+        <p className="text-[#fff] font-medium text-[14px]">Based in New York</p>
+        <p className="text-[#9ca3af] font-normal text-[14px]">Interaction Designer</p>
       </div>
     </header>
   );
