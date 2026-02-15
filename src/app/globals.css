@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --accent: #2563eb;
+  /* Design tokens - edit these to adjust spacing & typography */
+  --spacing-section: clamp(6rem, 15vw, 12rem);
+  --spacing-block: clamp(1.5rem, 4vw, 3rem);
+  --spacing-inline: clamp(1.25rem, 5vw, 3rem);
+  --font-hero: clamp(2rem, 12vw, 2.75rem);
+  --font-h1: clamp(1.5rem, 5vw, 2rem);
+  --font-h2: clamp(1.25rem, 4vw, 1.75rem);
+  --font-body: clamp(1.25rem, 1.5vw, 1.25rem);
+  --font-small: clamp(0.875rem, 1vw, 1rem);
+  --font-sf-pro: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sf-pro);
+  --font-display: var(--font-sf-pro);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sf-pro);
+}
+
+/* Typography utilities – Tailwind treats text-[var(...)] as color, so we set font-size explicitly */
+.text-hero {
+  font-size: var(--font-hero);
+}
+.text-h1 {
+  font-size: var(--font-h1);
+}
+.text-h2 {
+  font-size: var(--font-h2);
+}
+.text-body {
+  font-size: var(--font-body);
+}
+.text-small {
+  font-size: var(--font-small);
+}
