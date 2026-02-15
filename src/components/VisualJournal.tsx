@@ -51,7 +51,7 @@ export function VisualJournal() {
     >
       <div className="max-w-[1400px] mx-auto w-full">
         <div className="mb-2">
-          <p className="text-small text-neutral-500">
+          <p className="text-label">
             © Visual Journal ジャーナル · (WDX® — 10) · Creative Notes
           </p>
         </div>
@@ -62,7 +62,7 @@ export function VisualJournal() {
           duration={0.8}
           threshold={0.2}
           yOffset={6}
-          className="text-h1 font-bold tracking-tight text-foreground mb-10"
+          className="text-h1 font-display font-bold tracking-tight text-foreground mb-10"
         >
           Featured Article©
         </BlurRevealText>

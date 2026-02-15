@@ -35,7 +35,7 @@ export function NavBar() {
           </ul>
         </nav>
         <div className="hidden sm:block text-right">
-          <p className="text-small text-foreground/70">Based in New York</p>
+          <p className="text-label">Based in New York</p>
           <p className="text-small font-medium text-foreground">Interaction Designer</p>
         </div>
       </div>

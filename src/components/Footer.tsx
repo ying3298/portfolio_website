@@ -24,7 +24,7 @@ export function Footer() {
       role="contentinfo"
     >
       <div className="max-w-[1400px] mx-auto w-full space-y-10">
-        <p className="text-small text-neutral-500">
+        <p className="text-label">
           © Final Section クロージング · (WDX® — 12) · Studio Wrap
         </p>
         <p className="text-body text-foreground/90 leading-relaxed max-w-2xl">
@@ -34,7 +34,7 @@ export function Footer() {
           {pills.map((label) => (
             <span
               key={label}
-              className="inline-block px-4 py-2 rounded-full border border-neutral-300 text-small text-foreground"
+              className="inline-block px-4 py-2 rounded-full border border-neutral-200 text-small text-foreground"
             >
               {label}
             </span>
@@ -42,13 +42,13 @@ export function Footer() {
         </div>
         <a
           href="#"
-          className="inline-block text-small font-medium text-foreground hover:opacity-80 transition-opacity"
+          className="inline-block text-small font-medium text-foreground underline underline-offset-4 hover:opacity-80 transition-opacity"
         >
           Back To Top
         </a>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-neutral-200">
           <nav aria-label="Quick links">
-            <p className="text-small text-neutral-500 mb-2">Quick Links</p>
+            <p className="text-label mb-2">Quick Links</p>
             <ul className="flex flex-wrap gap-x-6 gap-y-1">
               {quickLinks.map(({ label, href }) => (
                 <li key={label}>
@@ -63,7 +63,7 @@ export function Footer() {
             </ul>
           </nav>
           <nav aria-label="Networks">
-            <p className="text-small text-neutral-500 mb-2">Networks</p>
+            <p className="text-label mb-2">Networks</p>
             <ul className="flex flex-wrap gap-x-6 gap-y-1">
               {networks.map(({ label, href }) => (
                 <li key={label}>
@@ -80,7 +80,7 @@ export function Footer() {
             </ul>
           </nav>
         </div>
-        <p className="text-small text-neutral-500 pt-4">©2025</p>
+        <p className="text-label pt-4">©2025</p>
       </div>
     </footer>
   );

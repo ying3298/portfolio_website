@@ -37,13 +37,13 @@ export function ArticleCard({
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
         </div>
-        <h3 className="text-h2 font-medium tracking-tight text-foreground mb-1">
+        <h3 className="text-h2 font-display font-medium tracking-tight text-foreground mb-1">
           {title}
         </h3>
-        <p className="text-small text-neutral-500 mb-2">
+        <p className="text-small text-muted mb-2">
           {author} · {date}
         </p>
-        <p className="text-small text-foreground/80 leading-relaxed">
+        <p className="text-small text-muted leading-relaxed">
           {excerpt}
         </p>
       </div>

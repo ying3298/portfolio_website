@@ -38,13 +38,13 @@ export function ProjectCard({
           />
         </div>
         <div className="space-y-1">
-          <h3 className="text-h2 font-medium tracking-tight text-foreground">
+          <h3 className="text-h2 font-display font-medium tracking-tight text-foreground">
             {title}
             {number != null && (
               <span className="text-foreground/60 font-normal"> ({number})</span>
             )}
           </h3>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-small text-neutral-500">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-small text-muted">
             <span>{category}</span>
             {year && <span>{year}</span>}
           </div>

@@ -67,11 +67,11 @@ export function SelectedWork() {
             duration={0.8}
             threshold={0.2}
             yOffset={6}
-            className="text-h1 font-bold tracking-tight text-foreground"
+            className="text-h1 font-display font-bold tracking-tight text-foreground"
           >
             Selected Works.
           </BlurRevealText>
-          <div className="flex flex-wrap items-center gap-x-4 text-small text-neutral-500">
+          <div className="flex flex-wrap items-center gap-x-4 text-label">
             <span>IN TOTAL [5]</span>
             <span>2022-2025</span>
             <span>© Featured Projects</span>
@@ -82,7 +82,7 @@ export function SelectedWork() {
         </p>
         <a
           href="#selected-work-heading"
-          className="inline-block text-small font-medium uppercase tracking-wider text-foreground hover:opacity-80 transition-opacity mb-10"
+          className="inline-block text-small font-medium uppercase tracking-wider text-foreground underline underline-offset-4 hover:opacity-80 transition-opacity mb-10"
         >
           SEE WORKS
         </a>
