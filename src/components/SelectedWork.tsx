@@ -87,8 +87,8 @@ export function SelectedWork() {
           SEE WORKS
         </a>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[var(--spacing-block)] gap-y-[var(--spacing-block)]">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projects.map((project, i) => (
+            <ProjectCard key={project.title} {...project} index={i} />
           ))}
         </div>
       </div>

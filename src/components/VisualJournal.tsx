@@ -12,6 +12,7 @@ const articles = [
     excerpt:
       "Good design is not just about structure—it's about the emotional weight of space, rhythm, and silence.",
     imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+    thumbnailSrc: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80",
     imageAlt: "Women Zoom Shot",
   },
   {
@@ -22,6 +23,7 @@ const articles = [
     excerpt:
       "Typography today is no longer static. It breathes, scales, and adapts—blurring the lines between function and expression.",
     imageSrc: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
+    thumbnailSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     imageAlt: "Woman",
   },
   {
@@ -32,6 +34,7 @@ const articles = [
     excerpt:
       "Minimal design isn't emptiness—it's clarity, intention, and the reduction of noise to amplify what truly matters.",
     imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+    thumbnailSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
     imageAlt: "Woman Glasses",
   },
   {
@@ -42,6 +45,7 @@ const articles = [
     excerpt:
       "Portfolios today must be more than archives—they need to feel alive, intentional, and editorial by design.",
     imageSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80",
+    thumbnailSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
     imageAlt: "Woman Alone",
   },
 ];

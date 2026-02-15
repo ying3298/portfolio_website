@@ -1,6 +1,8 @@
 "use client";
 
+import { useState, useRef } from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 export interface ProjectCardProps {
   title: string;
@@ -10,6 +12,7 @@ export interface ProjectCardProps {
   href: string;
   imageSrc: string;
   imageAlt: string;
+  index?: number;
 }
 
 export function ProjectCard({
@@ -20,21 +23,44 @@ export function ProjectCard({
   href,
   imageSrc,
   imageAlt,
+  index = 0,
 }: ProjectCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+
   return (
-    <a
+    <motion.a
+      ref={ref}
       href={href}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay: index * 0.08 }}
       className="group block"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       aria-label={`View project: ${title}`}
     >
-      <div className="overflow-hidden transition-opacity duration-300 hover:opacity-90">
+      <div className="overflow-hidden">
         <div className="aspect-[4/3] overflow-hidden bg-neutral-900 mb-4 rounded-lg relative">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={800}
-            height={600}
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+          <motion.div
+            animate={{ scale: isHovered ? 1.05 : 1 }}
+            transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={800}
+              height={600}
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0 bg-black/30 pointer-events-none"
           />
           <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-white">
             <span className="text-small font-medium text-black">{category}</span>
@@ -55,6 +81,6 @@ export function ProjectCard({
           <p className="text-small text-muted mt-1">{year}</p>
         )}
       </div>
-    </a>
+    </motion.a>
   );
 }

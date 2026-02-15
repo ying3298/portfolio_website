@@ -1,5 +1,7 @@
 "use client";
 
+import { ImageCarousel } from "./ImageCarousel";
+
 const quickLinks = [
   { label: "Home", href: "#" },
   { label: "Gallery", href: "#gallery" },
@@ -29,6 +31,9 @@ export function Footer() {
           <span className="text-label">© FINAL SECTION クロージング</span>
           <span className="text-label">(WDX® — 12)</span>
           <span className="text-label">STUDIO WRAP</span>
+        </div>
+        <div className="mb-10">
+          <ImageCarousel />
         </div>
         <div className="flex flex-wrap justify-center gap-4 py-6 px-8 bg-white rounded-lg">
           {pills.map((label) => (
